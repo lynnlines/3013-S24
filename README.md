@@ -4,4 +4,4 @@
 ### no URL (yet)
 
 ### Avatar 
-<img src="/master/3013-Algorithms-Allison/avatar.jpg" width="50%">
+<img src="/avatar.jpg" width="50%">
