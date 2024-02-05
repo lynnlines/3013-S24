@@ -1,0 +1,2 @@
+## Vector Class
+This program uses the created Vector class in Vector.h by imploying a linked list to allow it the vector properties of resizing. It is currently of type integer, and allows for the pushing of front and rear, and the same for its poping functions. The construction for this vector class can be default, or through it parametrized versions. These include from an integer array or a string to a file named "input.dat". All the results from these operations will be printed to a file named "test.out".
