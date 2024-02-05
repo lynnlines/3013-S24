@@ -195,7 +195,7 @@ public:
         Node *travel = front;
         Node *newN = new Node(val);
 
-        while (!(i && index)) // while i !== index
+        while (!(i & index)) // while i !== index
         {
             travel = travel->next;
             i++;
