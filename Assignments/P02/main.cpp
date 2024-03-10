@@ -1,6 +1,31 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+// Author:           Caitlin Allison && Terry Griffin
+// Email:            cnallison1211@my.msutexas.edu
+// Title:            Program 2 - Linear Search
+// Semester:         Spring 2024
+// Date:             9 March 2024
+//
+// Description:
+//       This programs imports a json file called dictionary into a vector of strings.
+//        The program then prompts the user to type in a word they are looking for and
+//        the program will respond with the first 10 matching words to the current input.
+//        After the word has been found and the user hits enter, the program will end.
+// Usage:
+//      #include "timer.hpp"
+//      #include "./headers/console.hpp"
+//      #include "./headers/rang.hpp"
+//      #include "./headers/json.hpp"
+//      #include <algorithm>
+//      #include <fstream>
+//      #include <iostream>
+//      #include <termios.h>
+//      #include <vector>
+/////////////////////////////////////////////////////////////////////////////////
+
 #include "./headers/console.hpp"
-  #include "./headers/rang.hpp"
-  #include "./headers/json.hpp"
+#include "./headers/rang.hpp"
+#include "./headers/json.hpp"
 #include <algorithm>
 #include <fstream>
 #include <iostream>
@@ -155,6 +180,10 @@ void searchForWord(vector<string> dictionary, vector<string> mainMenu)
     size_t found;           // size_t is an integer position of
                             // found item. -1 if its not found.
     if (substring.size() == 0) {
+            found = array[i].find("axal");      // check for string "axal"
+      if (found != string::npos) {           // if found >= 0 (its found then)
+        matches.push_back(array[i]);         // returned the word "axal" if found
+      }
       return matches;
     }
     for (int i = 0; i < array.size(); i++) { // loop through array
