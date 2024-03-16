@@ -45,7 +45,7 @@
   void printCurrent(char k, string word);
   void errorMessage(string message);
 vector<string> loadDictionary(string filename);
-void searchForWord(vector<string> dictionary, vector<string> mainMenu)
+void searchForWord(vector<string> dictionary, vector<string> mainMenu);
 
   int main() {
 
@@ -55,8 +55,8 @@ void searchForWord(vector<string> dictionary, vector<string> mainMenu)
 
     vector<string> dictionary = loadDictionary("./input/dictionary.json");
     // loads the json file into dictionary
-    
-    
+
+
     mainMenu.push_back("Type letters and watch the results change.");
     mainMenu.push_back(
         "Hit the DEL key to erase a letter from your search string.");
@@ -178,20 +178,28 @@ void searchForWord(vector<string> dictionary, vector<string> mainMenu)
   vector<string> partialMatch(vector<string> array, string substring) {
     vector<string> matches; // to hold any matches
     size_t found;           // size_t is an integer position of
-                            // found item. -1 if its not found.
+
+    // found item. -1 if its not found.
     if (substring.size() == 0) {
-            found = array[i].find("axal");      // check for string "axal"
+      for (int i = 0; i < array.size(); i++) { // loop through array
+        found = array[i].find("axal");
       if (found != string::npos) {           // if found >= 0 (its found then)
-        matches.push_back(array[i]);         // returned the word "axal" if found
+        matches.push_back(array[found]);         // returned the word "axal" if found
+      }
       }
       return matches;
     }
-    for (int i = 0; i < array.size(); i++) { // loop through array
-      found = array[i].find(substring);      // check for substr match
-      if (found != string::npos) {           // if found >= 0 (its found then)
-        matches.push_back(array[i]);         // add to matches
+
+    int fpos = substring.size() - 1;
+
+      for (int i = 0; i < array.size(); i++) { // loop through array
+          if (array[i].size() >= substring.size()) { // check if the string is long enough
+              string part = array[i].substr(0, substring.size()); // get the part of the string
+              if (part == substring) { // compare it with the substring
+                  matches.push_back(array[i]); // add to matches
+              }
+          }
       }
-    }
     return matches;
   }
 
