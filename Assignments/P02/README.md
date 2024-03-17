@@ -18,4 +18,7 @@ This programs imports a json file called dictionary into a vector of strings. Th
 - Input character keys into the console window until only one match remains
 - To end the program press the enter key twice.
 ## Example Command
-(./photos/Screenshot 2024-03-16 233351.pn)
+![alt txt](./photos/Screenshot1.png)
+![alt txt](./photos/Screenshot2.png)
+![alt txt](./photos/Screenshot3.png)
+![alt txt](./photos/Screenshot4.png)
