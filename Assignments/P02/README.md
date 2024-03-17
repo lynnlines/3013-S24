@@ -13,3 +13,9 @@ This programs imports a json file called dictionary into a vector of strings. Th
 | json | [json.hpp](./headers/json.hpp) | Allows json types |
 | rang | [rang.hpp](./headers/rang.hpp) | Color and Formatting |
 ***
+## Instructions
+- Requires C++ version 20
+- Input character keys into the console window until only one match remains
+- To end the program press the enter key twice.
+## Example Command
+(./photos/Screenshot 2024-03-16 233351.pn)
